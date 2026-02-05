@@ -1,12 +1,17 @@
-import { useState } from 'react'
+//App.jsx
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SearchContainer from "./components/Search/SearchContainer";
+import ProductDetail from "./components/Product/ProductDetail";
 
 function App() {
-
   return (
-    <>
-      <div>
-      </div>
-    </>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<SearchContainer/>}/>
+      <Route path="/product/:id" element={<ProductDetail/>}/>
+    </Routes>
+    </BrowserRouter>
   )
 }
 
