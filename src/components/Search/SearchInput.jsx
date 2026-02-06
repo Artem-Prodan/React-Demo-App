@@ -3,26 +3,14 @@ import "../../style.css";
 
 export default function SearchInput({
   searchText,
-  updateSearchText,
-  executeSearch,
+  updateSearchText
 }) {
-
-  const handleChange = (event) =>{
-    updateSearchText(event.target.value);
-  };
-
-  const handleSubmit = (event) =>{
-    event.preventDefault()
-    executeSearch()
-  }
-
-  return(
-    <form onSubmit={handleSubmit}>
-      <input type="text"
+  return (
+    <input
+      type="text"
       value={searchText}
-      onChange={handleChange}
-      placeholder="Search..."/>
-      <button type="submit">Find</button>
-    </form>
-  )
+      onChange={(e) => updateSearchText(e.target.value)}
+      placeholder="Search..."
+    />
+  );
 }
