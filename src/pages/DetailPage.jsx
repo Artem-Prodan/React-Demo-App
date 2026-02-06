@@ -1,27 +1,35 @@
-//src/components/Product/ProductDetail.jsx
+//src/pages/DetailPage.jsx
 
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import Loader from "../Loader";
+import Loader from "../components/Loader";
 
 export default function ProductDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
 
   useEffect(() => {
+    setLoading(true);
+    setError(null);
+
      fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-        .then((res) => res.json())
-        .then((data) => {
-          setProduct(data);
-          setLoading(false);
+        .then((res) => {
+          if(!res.ok){
+            throw new Error("Product not found");
+          }
+          return res.json();
         })
-      .catch(() => setLoading(false));
+        .then((data) => setProduct(data))
+        .catch((err) => setError(err.message))
+        .finally(()=> setLoading(false));
     }, [id]);
 
   if (loading) return <Loader/>;
-  if (!product) return <p>Product not found</p>;
+  if (error) return <p>{error}</p>;
 
   return (
     <div>

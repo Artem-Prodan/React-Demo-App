@@ -1,9 +1,9 @@
 # React Demo App
-## React + Vite
+## React + Vite and JavaScript
 
 This is simple React application which displays items fetched from JSONplaceholder with Search filter. Clicking on certain item will redirect to its Detail page.
 
-The project contsists of components, hooks, states, and routing with React Router.
+The project contsists of components, pages, hooks, states, and routing with React Router.
 
 ## Features
 - Fetches data from public REST API (jsonplaceholder)

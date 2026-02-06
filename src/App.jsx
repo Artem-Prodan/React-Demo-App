@@ -1,8 +1,8 @@
 //App.jsx
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SearchContainer from "./components/Search/SearchContainer";
-import ProductDetail from "./components/Product/ProductDetail";
+import SearchContainer from "./pages/MainPage";
+import ProductDetail from "./pages/DetailPage";
 
 function App() {
   return (
