@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Loader from "../Loader";
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -19,7 +20,7 @@ export default function ProductDetail() {
       .catch(() => setLoading(false));
     }, [id]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loader/>;
   if (!product) return <p>Product not found</p>;
 
   return (
