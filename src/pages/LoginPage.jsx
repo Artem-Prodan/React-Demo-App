@@ -1,7 +1,5 @@
-//src/pages/LoginPage.jsx
-
-import { useState } from "react";
-import { useAuth } from "../context/AuthContext";
+ import { useState } from "react";
+  import { useAuth } from "../context/AuthContext";
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -18,22 +16,30 @@ export default function LoginPage() {
   };
 
   return (
-    <div style={{ maxWidth: 400, margin: "50px auto", padding: 20, border: "1px solid #ccc" }}>
+    <div style={{
+      maxWidth: 400,
+      margin: "50px auto",
+      padding: 20,
+      border: "1px solid #ccc",
+      }}>
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: 10 }}>
-          <label>Name:</label>
+          <label htmlFor="name">Name:</label>
           <input
+            id="name"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Enter your name"
           />
         </div>
+
         <div style={{ marginBottom: 10 }}>
-          <label>Phone:</label>
+          <label htmlFor="phone">Phone:</label>
 
           <input
+            id="phone"
             type="text"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}

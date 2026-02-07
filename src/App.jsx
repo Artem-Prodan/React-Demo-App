@@ -1,6 +1,4 @@
-//App.jsx
-
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import SearchContainer from "./pages/MainPage";
 import ProductDetail from "./pages/DetailPage";
 import LoginPage from "./pages/LoginPage";

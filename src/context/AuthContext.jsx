@@ -1,4 +1,4 @@
-//src/context/AuthContext.jsx
+
 import { createContext, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 

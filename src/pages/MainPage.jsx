@@ -1,6 +1,4 @@
-//src/pages/MainPage.jsx
-
-  import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
   import { useSearchLogic } from "../hooks/SearchLogic";
   import { searchRule } from "../components/SearchHelper";
   import Loader from "../components/Loader";

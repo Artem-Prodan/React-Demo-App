@@ -1,8 +1,6 @@
-//src/pages/DetailPage.jsx
-
-import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import Loader from "../components/Loader";
+ import { useEffect, useState } from "react";
+  import { useParams, useNavigate } from "react-router-dom";
+  import Loader from "../components/Loader";
 
 export default function ProductDetail() {
   const { id } = useParams();

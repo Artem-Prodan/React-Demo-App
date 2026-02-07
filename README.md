@@ -3,7 +3,7 @@
 
 This is simple React application which displays items fetched from JSONplaceholder with Search filter. Clicking on certain item will redirect to its Detail page.
 
-The project contsists of components, pages, hooks, states, context, and routing with React Router.
+The project consists of components, pages, hooks, states, context, tests, and routing with React Router.
 
 ## Features
 - Fetches data from public REST API (jsonplaceholder)
@@ -24,14 +24,33 @@ The project contsists of components, pages, hooks, states, context, and routing 
 - SearchContainer - Fetches data, manages search state, and renders filtered results
 - SearchInput - Controlled input for dynamic search
 - ProductList / ProductCard - Renders the list and separate products
-- ProductDetail - Displys detailed info for selected product
+- ProductDetail - Displays detailed info for selected product
 - SearchHelper - function for filtering items
 - useSearchLogic (custom hook) - manages search input state
 - LoginPage - handles user login with validation
 - AuthContext - provides authentication state and login/logout functions
 - ProtectedRoute (in App.jsx) - allow access only to authenticated users
 
+## Testing
+- Unit tests written using Jest and React Testing Library
+- Mocking of AuthContext for isolated testing
+### Login page tests
+- Rendering of heading, inputs, and submit button
+- Successful login flow (calls login with correct data)
+- Failed login flow (displays error message)
+- Tests require proper label/input (htmlFor / id) for getByLabelText
+- Babel is configured to support JSX and modern JavaScript in tests
 
-## Scripts and dependencies
-1. npm install
-2. npm run dev - start the server
+
+## Dependencies
+- npm install
+- npm install --save-dev jest
+- npm install --save-dev @testing-library/react
+- npm install --save-dev @testing-library/jest-dom
+- npm install --save-dev @babel/preset-env
+- npm install --save-dev @babel/preset-react
+- npm install --save-dev babel-jest
+- npm install --save-dev identity-obj-proxy
+## Scripts
+- npm test - for testing
+- npm run dev - start the server

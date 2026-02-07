@@ -1,4 +1,4 @@
-//src/components/SearchHelper.jsx
+
 export function searchRule(products, searchText){
   if (!Array.isArray(products)) return[];
   if (typeof searchText !== "string") return[];

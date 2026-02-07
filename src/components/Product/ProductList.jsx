@@ -1,4 +1,4 @@
-//src/components/Product/ProductList.jsx
+
 import ProductCard from "./ProductCard";
 
 const ProductList = ({results}) =>{

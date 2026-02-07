@@ -1,4 +1,4 @@
-//src/components/Search/SearchInput.jsx
+
 import "../../style.css";
 
 export default function SearchInput({
