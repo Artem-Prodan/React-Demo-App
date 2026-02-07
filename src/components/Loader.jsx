@@ -1,8 +1,8 @@
 
 const Loader = () =>{
   return(
-    <div>
-      <p>Loading...</p>
+    <div className="load-container">
+      <p className="loading-message">Loading...</p>
     </div>
   );
 }

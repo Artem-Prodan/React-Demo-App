@@ -1,4 +1,5 @@
 
+// custom hook to manage search input state (searchText) and its updater (setSearchText)
 
 import { useState } from "react";
 

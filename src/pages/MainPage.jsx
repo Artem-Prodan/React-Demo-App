@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
   import ProductList from "../components/Product/ProductList";
   import SearchInput from "../components/Search/SearchInput";
   import { useAuth } from "../context/AuthContext";
+  import "../style.css";
 
 export default function SearchContainer() {
   const { user, logout } = useAuth(); // get user and logout function from context
@@ -37,17 +38,19 @@ export default function SearchContainer() {
 
   return (
     <div>
-      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
-        <h2>Welcome, {user?.name || "Guest"}!</h2>
-        <button onClick={logout} style={{ cursor: "pointer" }}>Logout</button>
-      </header>
+      <div className="top-bar">
+          <header className="main-page-header">
+            <h2 className="welcome-message">Welcome, {user?.name || "Guest"}!</h2>
+            <button onClick={logout} className="logout-button">Logout</button>
+          </header>
 
-      <SearchInput
-        searchText={searchText}
-        updateSearchText={setSearchText}
-      />
+          <SearchInput
+          searchText={searchText}
+          updateSearchText={setSearchText}
+          />
+      </div>
 
-      <ProductList results={filteredProducts} />
+        <ProductList results={filteredProducts} />
     </div>
   );
 }

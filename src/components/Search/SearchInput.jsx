@@ -1,16 +1,18 @@
+ import "../../style.css";
 
-import "../../style.css";
-
-export default function SearchInput({
-  searchText,
-  updateSearchText
-}) {
-  return (
-    <input
-      type="text"
-      value={searchText}
-      onChange={(e) => updateSearchText(e.target.value)}
-      placeholder="Search..."
-    />
-  );
-}
+ export default function SearchInput({
+    searchText,
+    updateSearchText
+  }) {
+    return (
+      <div className="search-bar">
+          <input
+        type="text"
+        value={searchText}
+        onChange={(e) => updateSearchText(e.target.value)}
+        placeholder="Search..."
+        className="search-input-field"
+      />
+      </div>
+    );
+  }

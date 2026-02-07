@@ -1,4 +1,6 @@
 
+// Filters a list of products by title based on the searchText
+
 export function searchRule(products, searchText){
   if (!Array.isArray(products)) return[];
   if (typeof searchText !== "string") return[];

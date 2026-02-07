@@ -3,7 +3,7 @@
 
 This is simple React application which displays items fetched from JSONplaceholder with Search filter. Clicking on certain item will redirect to its Detail page.
 
-The project consists of components, pages, hooks, states, context, tests, and routing with React Router.
+The project consists of components, pages, hooks, states, context, tests, custom CSS styling, and routing with React Router.
 
 ## Features
 - Fetches data from public REST API (jsonplaceholder)
@@ -21,10 +21,10 @@ The project consists of components, pages, hooks, states, context, tests, and ro
 
 ## Project Structure
 - App.jsx - Application entry point and route configuration
-- SearchContainer - Fetches data, manages search state, and renders filtered results
+- MainPage - Fetches data, manages search state, and renders filtered results
 - SearchInput - Controlled input for dynamic search
 - ProductList / ProductCard - Renders the list and separate products
-- ProductDetail - Displays detailed info for selected product
+- DetailPage - Displays detailed info for selected product
 - SearchHelper - function for filtering items
 - useSearchLogic (custom hook) - manages search input state
 - LoginPage - handles user login with validation

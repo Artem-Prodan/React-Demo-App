@@ -30,12 +30,12 @@ export default function ProductDetail() {
   if (error) return <p>{error}</p>;
 
   return (
-    <div>
-      <h2>{product.title}</h2>
-      <h4>Description:</h4>
-      <p>{product.body}</p>
+    <div className="detail-container">
+      <h2 className="product-title">{product.title}</h2>
+      <h4 className="product-description">Description:</h4>
+      <p className="product-description-body">{product.body}</p>
 
-      <button onClick={() => navigate("/")}>
+      <button className="return-button" onClick={() => navigate("/")}>
         Back to Main Page
       </button>
     </div>
