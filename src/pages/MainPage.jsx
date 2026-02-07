@@ -6,8 +6,10 @@
   import Loader from "../components/Loader";
   import ProductList from "../components/Product/ProductList";
   import SearchInput from "../components/Search/SearchInput";
+  import { useAuth } from "../context/AuthContext";
 
 export default function SearchContainer() {
+  const { user, logout } = useAuth(); // get user and logout function from context
   const [error, setError] = useState(null);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -37,6 +39,11 @@ export default function SearchContainer() {
 
   return (
     <div>
+      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+        <h2>Welcome, {user?.name || "Guest"}!</h2>
+        <button onClick={logout} style={{ cursor: "pointer" }}>Logout</button>
+      </header>
+
       <SearchInput
         searchText={searchText}
         updateSearchText={setSearchText}

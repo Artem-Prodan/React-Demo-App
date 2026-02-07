@@ -3,7 +3,7 @@
 
 This is simple React application which displays items fetched from JSONplaceholder with Search filter. Clicking on certain item will redirect to its Detail page.
 
-The project contsists of components, pages, hooks, states, and routing with React Router.
+The project contsists of components, pages, hooks, states, context, and routing with React Router.
 
 ## Features
 - Fetches data from public REST API (jsonplaceholder)
@@ -11,6 +11,13 @@ The project contsists of components, pages, hooks, states, and routing with Reac
 - Search filtering follows user typing
 - Navigation between pages using React Router
 - Detail page for each product with "return" button
+
+## Login
+- Login page with name and phone number validation
+- Mock authentication using Context API
+- Logout functionality
+- Protected routes - Main and Detail pages require login
+- Error messages for invalid login inputs
 
 ## Project Structure
 - App.jsx - Application entry point and route configuration
@@ -20,6 +27,10 @@ The project contsists of components, pages, hooks, states, and routing with Reac
 - ProductDetail - Displys detailed info for selected product
 - SearchHelper - function for filtering items
 - useSearchLogic (custom hook) - manages search input state
+- LoginPage - handles user login with validation
+- AuthContext - provides authentication state and login/logout functions
+- ProtectedRoute (in App.jsx) - allow access only to authenticated users
+
 
 ## Scripts and dependencies
 1. npm install
